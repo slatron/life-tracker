@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
 const LifeButton = ({change, life, cls, dispatch, id}) => {
