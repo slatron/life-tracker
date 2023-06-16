@@ -1,7 +1,7 @@
 {
   "name": "life-tracker",
   "description": "CSS / React Demo as a Lifetracking App",
-  "homepage": "slatron.github.io/life-tracker",
+  "homepage": "https://slatron.github.io/life-tracker",
   "private": true,
   "version": "1.0.0",
   "type": "module",
