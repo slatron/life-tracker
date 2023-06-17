@@ -29,5 +29,5 @@ git commit -m "deploy"
 
 git push origin gh-pages --force
 
-# go back to main (or master)
+# go back to main
 git checkout main
