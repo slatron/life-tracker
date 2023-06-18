@@ -15,7 +15,7 @@ npm run build
 
 # delete everything on the directory
 # except the dist folder
-find * -maxdepth 0 -name '/dist' -prune -o -exec rm -rf '{}' ';'
+find * -maxdepth 0 -name 'dist' -prune -o -exec rm -rf '{}' ';'
 
 # move the dist folder content
 # to the repository root
