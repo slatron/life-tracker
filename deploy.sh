@@ -3,19 +3,34 @@
 # Abort on errors
 set -e
 
-# Remove existing dist directory
-rm -rf dist
+# checkout to the gh-pages, reset
+# and sync the branch with our main
+# change here to master if you need
+git checkout gh-pages
+git reset --hard origin/main
 
-# Build new app directory
+# install dependencies and create
+# the react app build
 npm run build
-cd dist
 
-# Init new git repository and commit to gh-pages branch
-git checkout git@github.com:slatron/life-tracker.git gh-pages
+# delete everything on the directory
+# except the dist folder
+find * -maxdepth 0 -name '/dist' -prune -o -exec rm -rf '{}' ';'
+
+# move the dist folder content
+# to the repository root
+mv ./dist/* .
+
+# deletes the git cache and push
+# the new content to gh-pages
 git rm -rf --cache .
-git add . -A
-git commit -m 'deploy'
-git push git@github.com:slatron/life-tracker.git gh-pages --force
+git add .
+git commit -m "deploy"
 
-# go back to /
+git push origin gh-pages --force
+
+# go back to main
 git checkout main
+
+## reinstall deps on main branch
+npm install
