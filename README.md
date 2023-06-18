@@ -35,9 +35,9 @@ The UI can be put in "flip" mode. This rotates half of the players totals, makin
 
 This is a great use case for using both `grid` and `flex` display together.
 
-The life total sections are handled with `grid` display. This handles the multiple column layout better for more than two players.
+The life total sections are handled with `grid` display. Grid display handles multiple column layout well for more than two players.
 
-Alignment within these sections are handles with `flex` display since these are only using a songle-axis.
+Alignment within these sections are handled with `flex` display since these are only using a single-axis.
 
 Root SASS is based on my long-standing settings/state/typoography patterns. Base styles are imported in main.jsx. Components each import their own local styles.
 
