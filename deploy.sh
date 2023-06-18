@@ -11,11 +11,11 @@ npm run build
 cd dist
 
 # Init new git repository and commit to gh-pages branch
-git checkout origin/gh-pages
+git checkout git@github.com:slatron/life-tracker.git gh-pages
 git rm -rf --cache .
 git add . -A
 git commit -m 'deploy'
-git push origin gh-pages --force
+git push git@github.com:slatron/life-tracker.git gh-pages --force
 
 # go back to /
 git checkout main

@@ -19,7 +19,8 @@ npm run builds
 
 # delete everything on the directory
 # except the dist folder
-# find * -maxdepth 0 -name 'dist' -prune -o -exec rm -rf '{}' ';'
+keep=( dist node_modules )
+find * -maxdepth 0 -name "${keep[@]}" -prune -o -exec rm -rf '{}' ';'
 
 # move the dist folder content
 # to the repository root
@@ -28,10 +29,10 @@ mv ./dist/* .
 # deletes the git cache and push
 # the new content to gh-pages
 git rm -rf --cache .
-git add .
-git commit -m "deploy"
+# git add .
+# git commit -m "deploy"
 
-git push origin gh-pages --force
+# git push origin gh-pages --force
 
-# go back to main
-git checkout main
+# # go back to main
+# git checkout main
