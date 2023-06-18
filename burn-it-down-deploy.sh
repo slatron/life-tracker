@@ -20,7 +20,7 @@ npm run build
 # delete everything on the directory
 # except the dist folder
 keep=( dist node_modules )
-find * -maxdepth 0 -name "${keep[@]}" -prune -o -exec rm -rf '{}' ';'
+find * -maxdepth 0 -name ${keep[@]} -prune -o -exec rm -rf '{}' ';'
 
 # move the dist folder content
 # to the repository root
