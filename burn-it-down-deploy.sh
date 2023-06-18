@@ -15,7 +15,7 @@ git reset --hard origin/main
 
 # install dependencies and create
 # the react app build
-npm run builds
+npm run build
 
 # delete everything on the directory
 # except the dist folder
