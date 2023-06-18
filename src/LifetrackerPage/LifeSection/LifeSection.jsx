@@ -1,4 +1,4 @@
-import React, {useReducer, useEffect} from 'react'
+import {useReducer} from 'react'
 import PropTypes from 'prop-types'
 import {useState} from 'react'
 
@@ -13,15 +13,7 @@ import { reducer, initialCountersState } from './lifeSectionReducer'
 const LifeSection = ({id, flip, life, name, dispatch, playerCount}) => {
   
   const [viewCounters, setViewCounters] = useState(false)
-  const [currentPlayerCount, setPlayerCount] = useState(playerCount)
   const [state, counterDispatch] = useReducer(reducer, initialCountersState(playerCount, id))
-
-  useEffect(() => {
-    if (playerCount !== currentPlayerCount) {
-      setPlayerCount(playerCount)
-      counterDispatch({type: 'INIT_COLORS', payload: {id, playerCount}})
-    }
-  }, [playerCount, id, currentPlayerCount])
 
   return (
     <div className={`full-height-layout life-section ${flip ? 'flip' : ''}`}>

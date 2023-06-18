@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 import HeaderBar from './HeaderBar/HeaderBar'
 import Drawer from './Drawer/Drawer'
@@ -11,7 +11,7 @@ const CommonTemplate = ({drawerChildren, children}) => {
 
   return (
     <>
-      <HeaderBar {...{toggleDrawer}} />
+      <HeaderBar {...{toggleDrawer, drawerActive}} />
       <Drawer {...{drawerActive}}>
         {drawerChildren}
       </Drawer>

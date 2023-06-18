@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react'
+import {useReducer} from 'react'
 
 import CommonTemplate from '/src/Layout/CommonTemplate'
 import LifeSection from './LifeSection/LifeSection'
