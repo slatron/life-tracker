@@ -12,9 +12,10 @@ cd dist
 
 # Init new git repository and commit to gh-pages branch
 git checkout origin/gh-pages
-git add -A
+git rm -rf --cache .
+git add . -A
 git commit -m 'deploy'
-git push -f origin gh-pages 
+git push origin gh-pages --force
 
 # go back to /
 git checkout main
