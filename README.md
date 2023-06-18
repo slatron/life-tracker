@@ -2,6 +2,8 @@
 
 This was built to demo my CSS skills. It started as a Magic the Gathering tool. I've been able to use it to help track life totals in several games.
 
+[View App](https://slatron.github.io/life-tracker/)
+
 ## App Features
 
 Tracks life totals for 1 to 6 players. Each player has a main score and fourt control buttons in their life section. Each section also contains a coounter that can be used to track a value against a specific other player, such as special damage delt.
