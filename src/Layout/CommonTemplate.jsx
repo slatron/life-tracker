@@ -15,6 +15,7 @@ const CommonTemplate = ({drawerChildren, children}) => {
       <Drawer {...{drawerActive}}>
         {drawerChildren}
       </Drawer>
+      {drawerActive && <div onClick={() => setDrawerActive(false)} className="window-shade" div/>}
       <main>
         {children}
       </main>
