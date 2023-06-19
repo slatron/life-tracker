@@ -1,4 +1,4 @@
-import {useReducer} from 'react'
+import React, {useReducer} from 'react'
 import PropTypes from 'prop-types'
 import {useState} from 'react'
 
