@@ -15,7 +15,7 @@ section.life-section {
     grid-column: 1 / span 2;
   }
   &:nth-child(1) {
-    background-color: #46ff64;
+    background-color: lightgreen;
   }
   &:nth-child(2) {
     background-color: pink;
@@ -30,7 +30,7 @@ section.life-section {
     background-color: plum;
   }
   &:nth-child(6) {
-    background-color: thistle;
+    background-color: aqua;
   }
 }
 

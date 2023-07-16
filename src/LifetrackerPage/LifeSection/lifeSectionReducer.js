@@ -1,4 +1,4 @@
-const ALL_COLORS = ['aqua', 'pink', 'yellow', 'goldenrod', 'plum', 'thistle']
+const ALL_COLORS = ['lightgreen', 'pink', 'yellow', 'goldenrod', 'plum', 'aqua']
 
 const getInitColors = (playerCount, id) => {
   const colorCount = playerCount - 1 || 1
