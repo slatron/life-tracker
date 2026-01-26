@@ -10,7 +10,7 @@ const Drawer = ({children, drawerActive = false}) => {
     >
       <ul>
         <li >
-          <a href="https://slatron.github.io/">Home</a>
+          <a href="https://mikeslater.com/">Home</a>
         </li>
       </ul>
       {children}
