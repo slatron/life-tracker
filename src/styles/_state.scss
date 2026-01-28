@@ -1,4 +1,4 @@
-@import './settings';
+@use './settings';
 
 .align-right {
   text-align: right;
@@ -26,11 +26,11 @@
 
 .floated-links {
   float: right;
-  padding: $base-unit-quarter;
+  padding: settings.$base-unit-quarter;
 }
 
 .floated-links > a {
-  margin-left: $base-unit;
+  margin-left: settings.$base-unit;
 }
 
 .display-block {
@@ -38,11 +38,11 @@
 }
 
 .bottom-space-small {
-  padding-bottom: $base-unit-half;
+  padding-bottom: settings.$base-unit-half;
 }
 
 .bottom-space-large {
-  padding-bottom: $base-unit * 2;
+  padding-bottom: settings.$base-unit * 2;
 }
 
 .indented {
@@ -54,11 +54,11 @@
 }
 
 .pad-right {
-  padding-right: $base-unit-quarter;
+  padding-right: settings.$base-unit-quarter;
 }
 
 .pad-left {
-  padding-left: $base-unit-quarter;
+  padding-left: settings.$base-unit-quarter;
 }
 
 .vertical-align-container {
@@ -105,7 +105,7 @@
 }
 
 .truncate {
-  max-height: $base-unit * 9;
+  max-height: settings.$base-unit * 9;
   overflow-y: auto;
   display: block;
 }

@@ -1,4 +1,4 @@
-@import '../../styles/settings';
+@use '../../styles/settings';
 
 // Common
 .bg-lightgreen { background-color: lightgreen; }
@@ -15,7 +15,7 @@ button {
   margin: 0.15em;
   padding: 0.5em;
   border-radius: 0.25em;
-  @include breakpoint(tablet) {
+  @include settings.breakpoint(tablet) {
     font-size: 26px;
     background-color: #fff;
     padding: 0.75em;
@@ -53,13 +53,13 @@ button.down-big {
   }
   .header-row {
     font-size: 14px;
-    @include breakpoint(tablet) {
+    @include settings.breakpoint(tablet) {
       font-size: 24px;
     }
   }
   .header-row button {
     font-size: 10px;
-    @include breakpoint(tablet) {
+    @include settings.breakpoint(tablet) {
       font-size: 20px;
     }
   }
@@ -85,17 +85,17 @@ button.down-big {
       position: absolute;
       top: 0;
       left: 0;
-      @include breakpoint(tablet) {
+      @include settings.breakpoint(tablet) {
         padding: 0.6rem 0.6rem 2rem;
       }
     }
-    @include breakpoint(tablet) {
+    @include settings.breakpoint(tablet) {
       right: -167px;
     }
   }
   .counter-sections {
     width: 95px;
-    @include breakpoint(tablet) {
+    @include settings.breakpoint(tablet) {
       height: auto;
       width: 155px;
       max-height: 216px;
@@ -106,7 +106,7 @@ button.down-big {
     cursor: pointer;
     font-size: 124px;
     line-height: 1.0;
-    @include breakpoint(tablet) {
+    @include settings.breakpoint(tablet) {
       font-size: 158px;
     }
   }
@@ -127,7 +127,7 @@ button.down-big {
   text-align: center;
   width: 95px;
   height: 40px;
-  @include breakpoint(tablet) {
+  @include settings.breakpoint(tablet) {
     width: 155px;
     height: 68px;
   }
@@ -135,7 +135,7 @@ button.down-big {
     text-align: center;
     width: 95px;
     height: 40px;
-    @include breakpoint(tablet) {
+    @include settings.breakpoint(tablet) {
       width: 155px;
       height: 68px;
     }
@@ -149,7 +149,7 @@ button.down-big {
     height: 30px;
     width: 50px;
     border: none;
-    @include breakpoint(tablet) {
+    @include settings.breakpoint(tablet) {
       height: 50px;
     }
   }
@@ -157,7 +157,7 @@ button.down-big {
     font-size: 10px;
     padding: 0.25em;
     margin: 0 0.25em;
-    @include breakpoint(tablet) {
+    @include settings.breakpoint(tablet) {
       font-size: 16px;
     }
   }

@@ -1,12 +1,12 @@
-@import '../styles/settings';
+@use '../styles/settings';
 
 .wrapper {
-  max-width: $wrapper-width;
+  max-width: settings.$wrapper-width;
   margin: 0 auto;
 }
 main {
-  padding-top: $header-height;
-  z-index: $layer-main-body;
+  padding-top: settings.$header-height;
+  z-index: settings.$layer-main-body;
   height: 100%;
 }
 

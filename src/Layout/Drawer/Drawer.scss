@@ -1,18 +1,18 @@
-@import '../../styles/settings';
+@use '../../styles/settings';
 
 // Layout
 #drawer {
-  top: $header-height - 1;
-  background: $brand-color;
-  width: $drawer-width;
-  left: -$drawer-width;
+  top: settings.$header-height - 1;
+  background: settings.$brand-color;
+  width: settings.$drawer-width;
+  left: -(settings.$drawer-width);
   overflow-y: auto;
   position: fixed;
-  max-height: $drawer-max-height;
-  z-index: $layer-top-elements;
-  transition: $transtion-drawer;
-  border-radius: 0 0 $base-rounded-corners 0;
-  padding-bottom: $base-rounded-corners;
+  max-height: settings.$drawer-max-height;
+  z-index: settings.$layer-top-elements;
+  transition: settings.$transtion-drawer;
+  border-radius: 0 0 settings.$base-rounded-corners 0;
+  padding-bottom: settings.$base-rounded-corners;
 
   &.active {
     left: 0;
@@ -22,29 +22,29 @@
   ul {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid $color-white;
+    border-top: 1px solid settings.$color-white;
   }
 
   li {
-    border-bottom: 1px solid $color-white;
-    transition: $transtion-drawer;
+    border-bottom: 1px solid settings.$color-white;
+    transition: settings.$transtion-drawer;
 
     &.active,
     &:hover {
-      background: $color-black;
+      background: settings.$color-black;
     }
 
     a {
       display: block;
-      padding: $base-unit-half;
+      padding: settings.$base-unit-half;
     }
   }
-  @include breakpoint(tablet) {
-    width: $drawer-width * 1.5;
-    left: -$drawer-width * 1.5;
+  @include settings.breakpoint(tablet) {
+    width: settings.$drawer-width * 1.5;
+    left: -(settings.$drawer-width) * 1.5;
   }
-  @include breakpoint(laptop) {
-    width: $drawer-width * 2;
-    left: -$drawer-width * 2;
+  @include settings.breakpoint(laptop) {
+    width: settings.$drawer-width * 2;
+    left: -(settings.$drawer-width) * 2;
   }
 }

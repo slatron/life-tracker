@@ -1,15 +1,15 @@
-@import '../../styles/settings';
+@use '../../styles/settings';
 
 .header-bar {
-  background: $brand-color;
-  border-bottom: 1px solid $color-white;
+  background: settings.$brand-color;
+  border-bottom: 1px solid settings.$color-white;
   padding: 0.5em;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: $header-height;
-  z-index: $layer-top-elements;
+  height: settings.$header-height;
+  z-index: settings.$layer-top-elements;
   color: #fff;
   display: flex;
 
@@ -51,7 +51,7 @@
     background-color: #ecf0f1;
     display: block;
     margin: 6px auto;
-    transition: $transtion-drawer;
+    transition: settings.$transtion-drawer;
   }
 
   .hamburger:hover{
@@ -73,14 +73,14 @@
 }
 
 .window-shade {
-  transition: $transtion-drawer;
+  transition: settings.$transtion-drawer;
   opacity: 0.75;
   z-index: 20;
-  top: $header-height;
+  top: settings.$header-height;
   left: 0;
   bottom: 0;
   right: 0;
   overflow: hidden;
   position: fixed;
-  background: $color-black;
+  background: settings.$color-black;
 }

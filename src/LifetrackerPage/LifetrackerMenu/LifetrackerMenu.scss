@@ -1,4 +1,4 @@
-@import '../../styles/settings';
+@use '../../styles/settings';
 
 .life-tracker-menu {
   display: flex;
@@ -6,7 +6,7 @@
   margin: .5rem;
   color: #fff;
 
-  @include breakpoint(laptop) {
+  @include settings.breakpoint(laptop) {
     font-size: 18px;
   }
 
@@ -35,7 +35,7 @@
     font-size: 12px;
   }
 
-  @include breakpoint(laptop) {
+  @include settings.breakpoint(laptop) {
     button {
       padding: 0.5rem;
     }
