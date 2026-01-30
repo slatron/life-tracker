@@ -25,6 +25,7 @@ export const initialState = {
 }
 
 export const reducer = (state, action) => {
+  console.log({ action, state });
   switch (action.type) {
     case 'RESET_LIFE': {
       state.sections.forEach(s => s.life = state.startingLife)

@@ -1,19 +1,21 @@
-import React, {useReducer} from 'react'
-import PropTypes from 'prop-types'
-import {useState} from 'react'
+import React, {useReducer, useEffect} from 'react';
+import PropTypes from 'prop-types';
+import {useState} from 'react';
 
-import './lifeSection.scss'
+import './lifeSection.scss';
 
-import LifeButton from './LifeButton'
-import CounterSection from './CounterSection'
-import Pawn from './Pawn'
+import LifeButton from './LifeButton';
+import CounterSection from './CounterSection';
+import Pawn from './Pawn';
 
-import { reducer, initialCountersState } from './lifeSectionReducer'
+import { reducer, initialCountersState } from './lifeSectionReducer';
 
 const LifeSection = ({id, flip, life, name, dispatch, playerCount}) => {
   
-  const [viewCounters, setViewCounters] = useState(false)
-  const [state, counterDispatch] = useReducer(reducer, initialCountersState(playerCount, id))
+  const [viewCounters, setViewCounters] = useState(false);
+  const [state, counterDispatch] = useReducer(reducer, initialCountersState(playerCount, id));
+
+  useEffect(() => counterDispatch({type: 'INIT_COLORS', payload: {playerCount, id}}), [playerCount]);
 
   return (
     <div className={`full-height-layout life-section ${flip ? 'flip' : ''}`}>
